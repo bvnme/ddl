@@ -1,8 +1,10 @@
-Oracele SQL Developer имеет встроенный генератор DDL для экспорта объектов базы
-данных. Оказывается, можно достаточно просто использовать его для резервного
-копирования объектов БД, создав небольшое приложение командной строки.
+# Oracle DDL Generator
 
-Пример вызова:
+If you are using free Oracle SQL Developer you might have found its object export very powerful.
+It would be handy to have a similar instrument to run from shell, rather than from GUI. I could
+not find one, so I chose to reuse Oracle java libraries from SQL Developer app and to write a
+tiny command line exporter.
 
-./export.sh -c "jdbc:oracle:thin:@192.168.120.141:1521:sma3" -u system
--p password -s EAS_RU_2_16 -t TABLE -n FILES
+Usage:
+
+./export.sh -c "jdbc:oracle:thin:@192.168.120.141:1521:devel" -u system -p password -s SCHEMA -t TABLE -n MYTABLE
