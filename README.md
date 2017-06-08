@@ -8,3 +8,16 @@ tiny command line exporter.
 Usage:
 
 ./export.sh -c "jdbc:oracle:thin:@192.168.120.141:1521:devel" -u system -p password -s SCHEMA -t TABLE -n MYTABLE
+
+To run the app you need the following JARs from SQL Developer in your classpath:
+
+* dbapi-impl.jar
+* dbapi.jar
+* dbplsql.jar
+* javatools-nodeps.jar
+* ojdbc6.jar
+* xmlparserv2.jar
+
+You will also need commons-cli-1.4.jar, which you can download from http://commons.apache.org/proper/commons-cli/
+
+Hope somebody finds it useful!
